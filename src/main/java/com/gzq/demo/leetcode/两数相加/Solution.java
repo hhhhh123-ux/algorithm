@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 public class Solution {
     private static int[] convertToArray(String number) {
         // 将数字转换为字符串以便逐位获取
-        String numberString = String.valueOf(number);
+        String    numberString = String.valueOf(number);
 
         // 创建数组以容纳每一位
         int[] resultArray = new int[numberString.length()];
