@@ -3,13 +3,15 @@ package com.gzq.demo.leetcode.两数相加;
 import java.text.DecimalFormat;
 
 public class Solution {
+    /**
+     * 将数字转换为数组
+     *
+     * @param number
+     * @return
+     */
     private static int[] convertToArray(String number) {
         // 将数字转换为字符串以便逐位获取
-        String    numberString = String.valueOf(number);
-
-
-
-
+        String numberString = String.valueOf(number);
         // 创建数组以容纳每一位
         int[] resultArray = new int[numberString.length()];
 
@@ -21,6 +23,49 @@ public class Solution {
         return resultArray;
     }
 
+    /**
+     * 两数相加
+     *
+     * @param l1
+     * @param l2
+     * @return
+     */
+    public ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
+        ListNode head = null, tail = null;
+        int carry = 0;
+        while (l1 != null || l2 != null) {
+            int a = l1 != null ? l1.val : 0;
+            int b = l2 != null ? l2.val : 0;
+            if (l1 != null) {
+                l1 = l1.next;
+            }
+            if (l2 != null) {
+                l2 = l2.next;
+            }
+            int c = a + b + carry;
+            carry = c / 10;
+            c = c % 10;
+            if (head == null) {
+                head = tail = new ListNode(c);
+            } else {
+                tail.next = new ListNode(c);
+                tail = tail.next;
+            }
+        }
+        if (carry > 0) {
+            tail.next = new ListNode(carry);
+        }
+        return head;
+    }
+
+    /**
+     * 两数相加  此方法使用了DecimalFormat，将数字转换为字符串，再将字符串转换为数组，再将数组转换为数字，再将数组转换为数字
+     * 此方法不适用于大数据，因为DecimalFormat会将数字转换为字符串，然后将字符串转换为数组，最后将数组转换为数字，这会消耗大量的时间
+     *
+     * @param l1
+     * @param l2
+     * @return
+     */
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int i = 0;
         int j = 0;
