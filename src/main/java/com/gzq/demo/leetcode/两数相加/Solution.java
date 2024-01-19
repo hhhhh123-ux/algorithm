@@ -2,6 +2,14 @@ package com.gzq.demo.leetcode.两数相加;
 
 import java.text.DecimalFormat;
 
+/**
+ * @author
+ * @ProjectName: lettCode
+ * @createTime: 2021/11/29 11:31
+ * @title 第2题
+ * @Description: 二数相加
+ * @Version: 1.0
+ */
 public class Solution {
     /**
      * 将数字转换为数组
