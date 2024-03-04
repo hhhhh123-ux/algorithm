@@ -30,7 +30,7 @@ public class Solution {
         String str1 = "";
         for (int i = 0; i < arr.length; i++) {
             StringBuilder builder = new StringBuilder();
-            for (int j = i + 0; j < arr.length - 1; j++) {
+            for (int j = i; j < arr.length - 1; j++) {
                 String a = arr[j];
                 String b = arr[j + 1];
                 if (!a.equals(b)) {

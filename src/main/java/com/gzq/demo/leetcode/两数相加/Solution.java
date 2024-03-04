@@ -126,7 +126,7 @@ public class Solution {
         l2.next.next.next.next.next.next.next.next.next = new ListNode(9);
         ListNode result = addTwoNumbers(l1, l2);
         while (result != null) {
-            System.out.println(String.format("==%.0f", result.val));
+            System.out.printf("==%.0f%n", result.val);
             result = result.next;
         }
     }
