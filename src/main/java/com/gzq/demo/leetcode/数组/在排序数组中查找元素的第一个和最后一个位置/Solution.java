@@ -11,7 +11,7 @@ public class Solution {
                 if (j == 0) {
                     result[j++] = i;
                 }
-                if(j==1){
+                if (j == 1) {
                     result[j] = i;
                 }
             }

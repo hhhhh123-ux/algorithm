@@ -3,6 +3,10 @@ package com.gzq.demo.leetcode.数组.在排序数组中查找元素的第一个�
 import java.util.Arrays;
 
 public class Solution1 {
+
+    /*
+     *
+     */
     public int[] searchRange(int[] nums, int target) {
         int[] result = new int[]{-1, -1};
         if (nums.length == 0) {
