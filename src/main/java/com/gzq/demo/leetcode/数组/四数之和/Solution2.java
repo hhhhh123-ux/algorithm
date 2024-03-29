@@ -31,7 +31,7 @@ public class Solution2 {
                 int right = length - 1;
                 while (left > b && right > left) {
                     Long sum2 = (long) nums[a] + nums[b] + nums[left] + nums[right];
-                    if (Long.valueOf(sum2) == targetLong) {
+                    if (sum2 == targetLong) {
                         lists.add(Arrays.asList(nums[a], nums[b], nums[left], nums[right]));
                         left++;
                         right--;

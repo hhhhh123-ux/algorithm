@@ -15,7 +15,7 @@ public class Solution {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 for (int k = nums.length - 1; k > j; k--) {
-                    kk = 0 - nums[i] - nums[j];
+                    kk = -nums[i] - nums[j];
                     if (kk > nums[k]) {
                         break;
                     } else {
