@@ -16,7 +16,7 @@ public class Solution1 {
             for (int j = 0; j < 9; j++) {
                 char num = board[i][j];
                 if (num != '.') {
-                    int n = (int) num;
+                    int n = num;
                     int boxIndex = (i / 3) * 3 + j / 3;
                     rows[i].put(n, rows[i].getOrDefault(n, 0) + 1);
                     cols[j].put(n, cols[j].getOrDefault(n, 0) + 1);
