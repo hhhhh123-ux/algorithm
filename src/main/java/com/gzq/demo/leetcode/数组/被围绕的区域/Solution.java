@@ -44,7 +44,7 @@ public class Solution {
         backtracking(board, 0, 0, m, n, false, visited, false);
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if (visited[i][j] == true) {
+                if (visited[i][j]) {
                     board[i][j] = 'O';
                 } else {
                     board[i][j] = 'X';
@@ -65,16 +65,16 @@ public class Solution {
         if (start < 0 || end < 0 || start >= m || end >= n) {
             return;
         }
-        if (flag == true && board[start][end] == 'X') {
+        if (flag && board[start][end] == 'X') {
             return;
         }
-        if (visited[start][end] == true) {
+        if (visited[start][end]) {
             return;
         }
         System.out.println("start:" + start + " end:" + end);
         for (int i = start; i <m; i++) {
             for (int j = end; j < n; j++) {
-                if (visited2 == true && board[i][j] == 'O') {
+                if (visited2 && board[i][j] == 'O') {
                     visited[i][j] = true;
 
                 }

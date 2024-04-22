@@ -2,6 +2,7 @@ package com.gzq.demo.leetcode.数组.三角形最小路径和;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Solution1 {
@@ -32,7 +33,7 @@ public class Solution1 {
 
     public static void main(String[] args) {
         System.out.println(new Solution1().minimumTotal(new ArrayList<List<Integer>>() {{
-            add(Arrays.asList(2));
+            add(Collections.singletonList(2));
             add(Arrays.asList(3, 4));
             add(Arrays.asList(6, 5, 7));
             add(Arrays.asList(4, 1, 8, 3));

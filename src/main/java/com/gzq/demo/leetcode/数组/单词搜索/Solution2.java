@@ -25,10 +25,7 @@ public class Solution2 {
         }
 
         result.addAll(words);
-        if (result.contains(word)) {
-            return true;
-        }
-        return false;
+        return result.contains(word);
     }
 
 

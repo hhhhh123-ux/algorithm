@@ -22,11 +22,7 @@ public class Solution {
             }
         }
         System.out.println(result);
-        if (result.size() > 0) {
-            return true;
-        }
-
-        return false;
+        return result.size() > 0;
     }
 
     void backtracking(char[][] board, int begin, int i, int j, String word, boolean[][] visited) {
