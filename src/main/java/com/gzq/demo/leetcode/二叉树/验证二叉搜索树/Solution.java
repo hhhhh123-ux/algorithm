@@ -9,7 +9,7 @@ public class Solution {
             // 左子节点
             if (root.left != null) {
                 flag = isValidBSTLeft(root.left, val);
-                if(!flag){
+                if (!flag) {
                     return false;
                 }
                 if (root.left.val >= root.val) {
@@ -21,7 +21,7 @@ public class Solution {
             // 右子节点
             if (root.right != null) {
                 flag = isValidBSTRight(root.right, val);
-                if(!flag){
+                if (!flag) {
                     return false;
                 }
                 if (root.right.val <= root.val) {
@@ -110,27 +110,6 @@ public class Solution {
             }
         }
         return flag;
-    }
-
-
-//    public boolean isValidBST(TreeNode root) {
-//        return isValidBSTHelper(root, null, null);
-//    }
-
-    private boolean isValidBSTHelper(TreeNode node, Integer lower, Integer upper) {
-        if (node == null) {
-            return true;
-        }
-
-        int val = node.val;
-
-        // 检查当前节点的值是否在范围内
-        if ((lower != null && val <= lower) || (upper != null && val >= upper)) {
-            return false;
-        }
-
-        // 递归检查左右子树
-        return isValidBSTHelper(node.left, lower, val) && isValidBSTHelper(node.right, val, upper);
     }
 
     public static void main(String[] args) {

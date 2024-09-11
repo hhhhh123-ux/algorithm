@@ -72,7 +72,7 @@ public class Solution {
             return;
         }
         System.out.println("start:" + start + " end:" + end);
-        for (int i = start; i <m; i++) {
+        for (int i = start; i < m; i++) {
             for (int j = end; j < n; j++) {
                 if (visited2 && board[i][j] == 'O') {
                     visited[i][j] = true;
